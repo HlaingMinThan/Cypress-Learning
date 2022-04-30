@@ -76,7 +76,7 @@
     "name": null,
     "domain": null,
     "action": "Closure",
-    "uri": "/",
+    "uri": "blogs",
     "method": [
       "GET",
       "HEAD"
