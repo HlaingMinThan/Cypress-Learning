@@ -109,5 +109,121 @@
     "method": [
       "POST"
     ]
+  },
+  "dashboard": {
+    "name": "dashboard",
+    "domain": null,
+    "action": "Closure",
+    "uri": "dashboard",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "register": {
+    "name": "register",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\RegisteredUserController@create",
+    "uri": "register",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "login": {
+    "name": "login",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\AuthenticatedSessionController@create",
+    "uri": "login",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.request": {
+    "name": "password.request",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\PasswordResetLinkController@create",
+    "uri": "forgot-password",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.email": {
+    "name": "password.email",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\PasswordResetLinkController@store",
+    "uri": "forgot-password",
+    "method": [
+      "POST"
+    ]
+  },
+  "password.reset": {
+    "name": "password.reset",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\NewPasswordController@create",
+    "uri": "reset-password/{token}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.update": {
+    "name": "password.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\NewPasswordController@store",
+    "uri": "reset-password",
+    "method": [
+      "POST"
+    ]
+  },
+  "verification.notice": {
+    "name": "verification.notice",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\EmailVerificationPromptController@__invoke",
+    "uri": "verify-email",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "verification.verify": {
+    "name": "verification.verify",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\VerifyEmailController@__invoke",
+    "uri": "verify-email/{id}/{hash}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "verification.send": {
+    "name": "verification.send",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController@store",
+    "uri": "email/verification-notification",
+    "method": [
+      "POST"
+    ]
+  },
+  "password.confirm": {
+    "name": "password.confirm",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ConfirmablePasswordController@show",
+    "uri": "confirm-password",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "logout": {
+    "name": "logout",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\AuthenticatedSessionController@destroy",
+    "uri": "logout",
+    "method": [
+      "POST"
+    ]
   }
 }
