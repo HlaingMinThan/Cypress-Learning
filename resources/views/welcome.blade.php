@@ -12,12 +12,37 @@
         content="ie=edge"
     >
     <title>Document</title>
+    <script
+        src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+        defer
+    ></script>
 </head>
 
 <body>
-    @foreach ($blogs as $blog)
-    <h1>{{$blog->title}}</h1>
-    @endforeach
+    <div
+        class="posts"
+        x-data="{posts:[],loading:false}"
+        x-init="
+            loading=true;
+            fetch('/posts')
+            .then((res)=>res.json())
+            .then((res)=>{
+                posts = res
+                loading = false;
+            })
+            "
+    >
+        <div
+            class="loading"
+            x-show="loading"
+        >loading...</div>
+        <template
+            x-for="(post) in posts"
+            x-show="!loading"
+        >
+            <h1 x-text="post.title"></h1>
+        </template>
+    </div>
 </body>
 
 </html>

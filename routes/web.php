@@ -25,6 +25,14 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/posts', function () {
+    sleep(2);
+    return [
+        ['title' => 'first posts'],
+        ['title' => 'second posts']
+    ];
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
