@@ -2,6 +2,8 @@
 //https://docs.cypress.io/api/commands/as#Intercept
 
 it("should show all posts after loading", () => {
+    //u can use like this for temporary
+    // cy.writeFixtureByServer("/posts", "tests/cypress/fixtures/test.json");
     // make a fake request to backend
     cy.intercept("/posts", {
         fixture: "posts.json",
